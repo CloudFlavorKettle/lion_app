@@ -10,5 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: get event
-            #   run: echo "this event is ${{github.event_name}}"
-              run: ehco "This event is $GITHUB_EVENT_NAME"
+              run: echo "this event is ${{github.event_name}}"
+            #   run: ehco "This event is $GITHUB_EVENT_NAME"
+            - name: echo github context
+              run: echo "${{github.repositoryUrl}}"
